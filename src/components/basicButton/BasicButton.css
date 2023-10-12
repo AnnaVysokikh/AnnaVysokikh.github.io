@@ -1,0 +1,45 @@
+.in-basket {
+    background-color: #54b8cd;
+    border-color: #54b8cd;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    /*display: inline-block;*/
+    vertical-align: middle;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    /*line-height: 22px;*/
+    padding: 8px 24px 10px;
+    font-size: 14px;
+    /*line-height: 20px;*/
+
+    margin-right: auto;
+}
+.in-basket:hover {
+    background-color: #4995aa;
+    border: 2px solid #4995aa;
+}
+
+.basket-button__div {
+    display: table-cell;
+    vertical-align: middle;
+    horiz-align: right;
+    margin-right: auto;
+}
+
+.in-basket__disabled {
+    background-color: #6595aa;
+    border: 2px solid #6595aa;
+}
+
+.in-basket__left-button {
+    border-radius: 8px 0px 0px 8px;
+}
+
+.in-basket__right-button {
+    border-radius: 0px 8px 8px 0px;
+}

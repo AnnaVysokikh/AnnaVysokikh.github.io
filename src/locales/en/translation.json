@@ -1,0 +1,94 @@
+{
+  "components": {
+    "inBasket": "Into basket"
+  },
+  "test": "fff",
+  "language": {
+    "ru": "RU",
+    "en": "EN"
+  },
+  "titleShop": "PetShop 'Good'",
+  "aboutTheProduct": "About the product",
+  "products": {
+    "WiskasChicken75": {
+      "category": "Wet cat food",
+      "nameProduct": "Wiskas. Chicken-flavored stew, 75 g",
+      "definition": "Wet cat food. Chicken-flavored stew, 75 g"
+    },
+    "WiskasChicken200": {
+      "category": "Dry cat foo",
+      "nameProduct": "Wiskas. Chicken-flavored food, 75 g",
+      "definition": "Dry cat foodd. Chicken-flavored food, 75 g"
+    }
+  },
+  "HomeScreenTitle": "Home",
+  "CartButtonTitle": "Cart",
+  "StoreScreenTitle": "Store",
+  "AddProductTitle": "Add product",
+  "ProfileScreenTitle": "Profile",
+  "description": "Accounting of the income and expenses of the organization is carried out on the basis of the norms of the current accounting and tax legislation. What relates to income and expenses, how to properly organize their accounting? Are there any differences between the accounting and tax method of accounting for income and expenses? The answers to these and other questions will be considered in the material below. Each commercial company is created for the purpose of making a profit. In order to get a financial result, it is necessary to competently organize the correct accounting of the income and expenses of the organization. The results of the company's work are of interest not only to its participants, but also to investors, as well as fiscal authorities. At the same time, tax accounting and accounting of income and expenses are somewhat different. In accounting, the concept and algorithm of accounting for income and expenses are regulated by PBU 9/99 and PBU 10/99, respectively. At the same time, the lists of other income and expenses are open. The company's income is an increase in the economic benefits of the organization due to the receipt of cash or other assets, as well as the repayment of liabilities that resulted in capital gains (paragraph 2 of PBU 9/99). There are 2 types of income: from ordinary activities and others. Accounting of the income and expenses of the organization is carried out on the basis of the norms of the current accounting and tax legislation. What relates to income and expenses, how to properly organize their accounting? Are there any differences between the accounting and tax method of accounting for income and expenses? The answers to these and other questions will be considered in the material below. Each commercial company is created for the purpose of making a profit. In order to get a financial result, it is necessary to competently organize the correct accounting of the income and expenses of the organization. The results of the company's work are of interest not only to its participants, but also to investors, as well as fiscal authorities. At the same time, tax accounting and accounting of income and expenses are somewhat different. In accounting, the concept and algorithm of accounting for income and expenses are regulated by PBU 9/99 and PBU 10/99, respectively. At the same time, the lists of other income and expenses are open. The company's income is an increase in the economic benefits of the organization due to the receipt of cash or other assets, as well as the repayment of liabilities that resulted in capital gains (paragraph 2 of PBU 9/99). There are 2 types of income: from ordinary activities and others. Accounting of the income and expenses of the organization is carried out on the basis of the norms of the current accounting and tax legislation. What relates to income and expenses, how to properly organize their accounting? Are there any differences between the accounting and tax method of accounting for income and expenses? The answers to these and other questions will be considered in the material below. Each commercial company is created for the purpose of making a profit. In order to get a financial result, it is necessary to competently organize the correct accounting of the income and expenses of the organization. The results of the company's work are of interest not only to its participants, but also to investors, as well as fiscal authorities. At the same time, tax accounting and accounting of income and expenses are somewhat different. In accounting, the concept and algorithm of accounting for income and expenses are regulated by PBU 9/99 and PBU 10/99, respectively. At the same time, the lists of other income and expenses are open. The company's income is an increase in the economic benefits of the organization due to the receipt of cash or other assets, as well as the repayment of liabilities that resulted in capital gains (paragraph 2 of PBU 9/99). There are 2 types of income: from ordinary activities and others. Accounting of the income and expenses of the organization is carried out on the basis of the norms of the current accounting and tax legislation. What relates to income and expenses, how to properly organize their accounting? Are there any differences between the accounting and tax method of accounting for income and expenses? The answers to these and other questions will be considered in the material below. Each commercial company is created for the purpose of making a profit. In order to get a financial result, it is necessary to competently organize the correct accounting of the income and expenses of the organization. The results of the company's work are of interest not only to its participants, but also to investors, as well as fiscal authorities. At the same time, tax accounting and accounting of income and expenses are somewhat different. In accounting, the concept and algorithm of accounting for income and expenses are regulated by PBU 9/99 and PBU 10/99, respectively. At the same time, the lists of other income and expenses are open. The company's income is an increase in the economic benefits of the organization due to the receipt of cash or other assets, as well as the repayment of liabilities that resulted in capital gains (paragraph 2 of PBU 9/99). There are 2 types of income: from ordinary activities and others. Accounting of the income and expenses of the organization is carried out on the basis of the norms of the current accounting and tax legislation. What relates to income and expenses, how to properly organize their accounting? Are there any differences between the accounting and tax method of accounting for income and expenses? The answers to these and other questions will be considered in the material below. Each commercial company is created for the purpose of making a profit. In order to get a financial result, it is necessary to competently organize the correct accounting of the income and expenses of the organization. The results of the company's work are of interest not only to its participants, but also to investors, as well as fiscal authorities. At the same time, tax accounting and accounting of income and expenses are somewhat different. In accounting, the concept and algorithm of accounting for income and expenses are regulated by PBU 9/99 and PBU 10/99, respectively. At the same time, the lists of other income and expenses are open. The company's income is an increase in the economic benefits of the organization due to the receipt of cash or other assets, as well as the repayment of liabilities that resulted in capital gains (paragraph 2 of PBU 9/99). There are 2 types of income: from ordinary activities and others. Accounting of the income and expenses of the organization is carried out on the basis of the norms of the current accounting and tax legislation. What relates to income and expenses, how to properly organize their accounting? Are there any differences between the accounting and tax method of accounting for income and expenses? The answers to these and other questions will be considered in the material below. Each commercial company is created for the purpose of making a profit. In order to get a financial result, it is necessary to competently organize the correct accounting of the income and expenses of the organization. The results of the company's work are of interest not only to its participants, but also to investors, as well as fiscal authorities. At the same time, tax accounting and accounting of income and expenses are somewhat different. In accounting, the concept and algorithm of accounting for income and expenses are regulated by PBU 9/99 and PBU 10/99, respectively. At the same time, the lists of other income and expenses are open. The company's income is an increase in the economic benefits of the organization due to the receipt of cash or other assets, as well as the repayment of liabilities that resulted in capital gains (paragraph 2 of PBU 9/99). There are 2 types of income: from ordinary activities and others.",
+  "ProfileForm": {
+    "name": {
+      "title": "Nickname",
+      "placeholder": "Come up with a pseudonym for yourself"
+    },
+    "about": {
+      "title": "About",
+      "placeholder": "Write something about yourself"
+    }
+  },
+  "RepeatPasswordForm": {
+    "password": {
+      "title": "Password",
+      "placeholder": "Enter password"
+    },
+    "repeatPassword": {
+      "title": "Repeat password",
+      "placeholder": "Repeat password"
+    }
+  },
+  "ProfileScreen": {
+    "title": "Profile",
+    "updateProfile": {
+      "title": "Change profile",
+      "success": "Profile changed successfully",
+      "save": "Save"
+    },
+    "changePassword": {
+      "title": "Change password",
+      "success": "Password changed successfully",
+      "save": "Change"
+    }
+  },
+  "ChangePasswordForm": {
+    "password": {
+      "title": "Password",
+      "placeholder": "Enter password"
+    },
+    "newPassword": {
+      "title": "New password",
+      "placeholder": "Enter new password"
+    },
+    "repeatPassword": {
+      "title": "Repeat password",
+      "placeholder": "Repeat password"
+    }
+  },
+  "AddProductForm": {
+    "category": "Product category",
+    "productName": "Produсt name",
+    "shortDescription": "Short description of the product",
+    "description": "Description of the product",
+    "price": "Price",
+    "addImages": "Add Images",
+    "error": "The field is required to fill in",
+    "add": "Add",
+    "selectFile": "Select a file",
+    "oldPrice": "Old price",
+    "change": "Change"
+  },
+  "is_required": "Required field",
+  "Authorization": "Sign in",
+  "Registration": "Sign up",
+  "Exit": "Sign out"
+}
