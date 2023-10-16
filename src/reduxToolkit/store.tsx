@@ -1,10 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import thunkMiddleware from 'redux-thunk';
 import profileSlice from './profileSlice';
+import operationSlice from './operationSlice';
+import categorySlice from './categorySlice';
+import filterSlice from './filterSlice';
 
 export const store = configureStore({
   reducer: {
     profileSlice,
+    operationSlice,
+    categorySlice,
+    filterSlice,
   },
   middleware: [thunkMiddleware],
 });

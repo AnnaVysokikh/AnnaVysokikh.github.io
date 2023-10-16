@@ -1,7 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { AuthResult, ChangePasswordBody, ChangePasswordResult, Profile, ServerErrors, SignInBody, SignUpBody, ThunkApi, UpdateProfileBody } from "./app.types";
+import { AuthResult, ChangePasswordBody, ChangePasswordResult, Profile, ServerErrors, SignInBody, SignUpBody, UpdateProfileBody } from "./app.types";
 import { setProfile } from "./profileSlice";
 import { setMessageErrors } from "./messageSlice";
+
+interface ThunkApi {
+  errorMessage: string;
+  // ...
+}
 
 export const fetchSignIn = createAsyncThunk<AuthResult, SignInBody, { rejectValue: ThunkApi }>(
     'fetchSignIn',
