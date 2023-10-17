@@ -1,6 +1,5 @@
 import { MessageForm } from './MessageForm';
 import s from './MessageForm.module.sass';
-import { useTheme } from '../../theme/Theme';
 import { RouteDecorator } from '../../../../.storybook/storyDecorators';
 
 export default {

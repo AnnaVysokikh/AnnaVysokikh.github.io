@@ -3,7 +3,6 @@ import React, { FC } from 'react';
 import '../../i18n';
 import { useTranslation } from 'react-i18next';
 import s from './LanguageButton.module.sass';
-import { BasicButton } from '../basicButton/BasicButton';
 
 export enum Locale {
   ru = 'ru',

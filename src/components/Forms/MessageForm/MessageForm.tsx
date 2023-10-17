@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import style from './MessageForm.module.sass';
+import s from './MessageForm.module.sass';
 import { ServerErrors } from '../../../reduxToolkit/app.types';
-import { BasicButton } from '../../basicButton/BasicButton';
 import { Modal } from '../../modal/modal';
 
 export type MessageFormProps = {
@@ -33,21 +32,16 @@ export const MessageForm: FC<MessageFormProps> = ({ caption, text, onClickEvent,
   const content = createContent();
   return (
     <Modal>
-      <div className={style.message_content}>
-        {caption && <label className={style.message_caption}>{caption}</label>}
-        <div className={style.message_text_context}>
-          <img
-            src={require(messageType === 'Error' ? `../../../images/icon-error.png` : `../../../images/icon-ok.png`)}
-            width="40px"
-            height="40px"
-          />
-          <div className={style.message_text}>
+      <div className={s.message_content}>
+        {caption && <label className={s.message_caption}>{caption}</label>}
+        <div className={s.message_text_context}>
+          <div className={s.message_text}>
             {text && <label>{text}</label>}
             {errors && content}
           </div>
         </div>
-        <div className={style.div_button}>
-          <BasicButton onClick={onClickEvent} text="OK" />
+        <div className={s.div_button}>
+          <button onClick={onClickEvent}>OK</button>
         </div>
       </div>
     </Modal>

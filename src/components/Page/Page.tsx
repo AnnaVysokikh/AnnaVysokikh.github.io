@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import cn from 'clsx';
 import { Frame } from '../Frame';
-import s from './Page.sass';
+import s from './Page.module.sass';
 
 export type PageProps = {
   className?: string;

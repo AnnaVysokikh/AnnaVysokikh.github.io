@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type Category = {
+export type CategoryType = {
   id: string;
   name: string;
   photo?: string;
@@ -16,7 +16,7 @@ type Cost = {
   createdAt: Date;
   updatedAt: Date;
   amount: number;
-  category: Category;
+  category: CategoryType;
   type: 'Cost';
 };
 
@@ -28,11 +28,11 @@ type Profit = {
   createdAt: Date;
   updatedAt: Date;
   amount: number;
-  category: Category;
+  category: CategoryType;
   type: 'Profit';
 };
 
-export type Operation = Profit | Cost;
+export type OperationType = Profit | Cost;
 
 export type Profile = {
   id: string;
@@ -149,7 +149,7 @@ export type NewCategory = {
 };
 
 export type OperationList = {
-  data: Operation[];
+  data: OperationType[];
   pagination: {
     pageSize: number;
     pageNumber: number;
@@ -162,7 +162,7 @@ export type OperationList = {
 };
 
 export type CategoryList = {
-  data: Category[];
+  data: CategoryType[];
   pagination: {
     pageSize: number;
     pageNumber: number;

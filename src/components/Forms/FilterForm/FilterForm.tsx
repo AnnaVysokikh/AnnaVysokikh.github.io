@@ -12,7 +12,6 @@ import { Select } from 'antd';
 import Checkbox from '../../Checkbox/Checkbox';
 import { setFilter } from 'src/reduxToolkit/filterSlice';
 import { clearOperations, setUploadPage } from 'src/reduxToolkit/operationSlice';
-import { BasicButton } from 'src/components/basicButton/BasicButton';
 import { useTranslation } from 'react-i18next';
 
 // eslint-disable-next-line react/prop-types

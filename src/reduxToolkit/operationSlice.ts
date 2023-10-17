@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Operation } from '../reduxToolkit/app.types';
+import { OperationType } from '../reduxToolkit/app.types';
 
 export interface StateProps {
-  operations: Operation[];
+  operations: OperationType[];
   errors: string[];
   uploadPage: number;
   allUploaded: boolean;
   openAddOperation: boolean;
-  editOperation: Operation;
+  editOperation: OperationType;
 }
 const initialState: StateProps = {
   operations: [],

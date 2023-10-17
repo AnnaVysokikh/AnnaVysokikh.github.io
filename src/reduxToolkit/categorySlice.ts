@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Category } from '../reduxToolkit/app.types';
+import { CategoryType } from '../reduxToolkit/app.types';
 
 export interface StateProps {
-  categories: Category[];
+  categories: CategoryType[];
   errors: string[];
   openAddCategory: boolean;
   allUploaded: boolean;
-  editCategory: Category;
+  editCategory: CategoryType;
 }
 const initialState: StateProps = {
   categories: [],

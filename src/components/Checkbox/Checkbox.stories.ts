@@ -1,10 +1,8 @@
-import { useTheme } from '../theme/Theme';
 import './Checkbox.css';
 import { RouteDecorator } from '../../../.storybook/storyDecorators';
 
 import Checkbox from './Checkbox';
 import {ChangeEvent} from "react";
-import {log} from "util";
 
 export default {
   component: Checkbox,

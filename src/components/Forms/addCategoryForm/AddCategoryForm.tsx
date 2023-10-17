@@ -3,7 +3,7 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import s from './AddCategoryForm.module.sass';
 
 import { useTranslation } from 'react-i18next';
-import { Category, NewCategory, Operation } from '../../../reduxToolkit/app.types';
+import { CategoryType, NewCategory, OperationType } from '../../../reduxToolkit/app.types';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../reduxToolkit/store';
 import { Modal } from '../../../components/modal/modal';
@@ -13,13 +13,12 @@ import { fetchAddCategoryWithImage, fetchChangeCategoryWithImage } from '../../.
 import { ThunkDispatch } from 'redux-thunk';
 // eslint-disable-next-line import/named
 import { AnyAction } from '@reduxjs/toolkit';
-import { BasicButton } from '../../basicButton/BasicButton';
 import { VerificationInput } from '../../VerificationInput/VerificationInput';
 
 // eslint-disable-next-line react/prop-types
 export const AddCategoryForm: FC = () => {
-  type AppDispatch = ThunkDispatch<Operation, any, AnyAction>;
-  const category = useSelector<RootState, Category>((state) => state.categorySlice.editCategory);
+  type AppDispatch = ThunkDispatch<OperationType, any, AnyAction>;
+  const category = useSelector<RootState, CategoryType>((state) => state.categorySlice.editCategory);
 
   const dispatch: AppDispatch = useDispatch();
   const {
@@ -110,7 +109,7 @@ export const AddCategoryForm: FC = () => {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
               {url && <img src={url} width="70px"></img>}
               {file && <img src={URL.createObjectURL(file)} width="70px" />}
-              <BasicButton text="Х" className={s.buttonDelete} onClick={() => onClickDeleteFile()} />
+              <button className={s.buttonDelete} onClick={() => onClickDeleteFile()} >X</button>
             </div>
           )}
         </div>

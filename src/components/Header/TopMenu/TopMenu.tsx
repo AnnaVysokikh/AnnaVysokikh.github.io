@@ -15,26 +15,26 @@ export const getClassName: NavLinkProps['className'] = ({ isActive }) => cn(s.li
 const TopMenu = ({ children }: TopMenuProps) => {
   const { t } = useTranslation();
   const isSingIn = useSelector<RootState, boolean>((state) => state.profileSlice.isSingIn);
-  const isAdmin = useSelector<RootState, boolean>((state) => state.profileSlice.isAdmin);
   return (
     <div className={s.menu}>
       {children}
       <NavLink className={getClassName} to="/">
         {t`HomeScreenTitle`}
       </NavLink>
-      <NavLink className={getClassName} to="/store">
-        {t`StoreScreenTitle`}
+      <NavLink className={getClassName} to="/operationList">
+        {t`OperationScreenTitle`}
       </NavLink>
+      {isSingIn && (
+        <NavLink className={getClassName} to="/categoryList">
+          {t`CategoryScreenTitle`}
+        </NavLink>
+      )}
       {isSingIn && (
         <NavLink className={getClassName} to="/profile">
           {t`ProfileScreenTitle`}
         </NavLink>
       )}
-      {/* {isAdmin && (
-        <NavLink className={getClassName} to="/addProduct">
-          {t`AddProductTitle`}
-        </NavLink>
-      )} */}
+
     </div>
   );
 };

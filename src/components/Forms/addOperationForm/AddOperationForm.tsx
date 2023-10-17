@@ -3,8 +3,7 @@ import { SubmitHandler, useForm, Controller } from 'react-hook-form';
 import './AddOperationForm.css';
 
 import { useTranslation } from 'react-i18next';
-import { Category, NewOperation, Operation } from '../../../reduxToolkit/app.types';
-import { BasicButton } from '../../basicButton/BasicButton';
+import { CategoryType, NewOperation, OperationType } from '../../../reduxToolkit/app.types';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../reduxToolkit/store';
 import { setOpenAddOperation } from '../../../reduxToolkit/operationSlice';
@@ -24,9 +23,9 @@ const { Option } = Select;
 // eslint-disable-next-line react/prop-types
 export const AddOperationForm: FC = () => {
   const allCategoryUploaded = useSelector<RootState, boolean>((state) => state.categorySlice.allUploaded);
-  type AppDispatch = ThunkDispatch<Operation, any, AnyAction>;
+  type AppDispatch = ThunkDispatch<OperationType, any, AnyAction>;
 
-  const operation = useSelector<RootState, Operation>((state) => state.operationSlice.editOperation);
+  const operation = useSelector<RootState, OperationType>((state) => state.operationSlice.editOperation);
   const defaultDate: Date = operation && operation.date ? new Date(Date.parse(operation.date)) : new Date();
 
   const [categoryId, setCategoryId] = useState(operation ? operation.category.id : undefined);
@@ -106,7 +105,7 @@ export const AddOperationForm: FC = () => {
     dispatch(setOpenAddOperation(false));
   };
   const [isOpen, setIsOpen] = useState(true);
-  const categories = useSelector<RootState, Category[]>((state) => state.categorySlice.categories);
+  const categories = useSelector<RootState, CategoryType[]>((state) => state.categorySlice.categories);
 
   const onClickProf = () => {
     setTypeUndefined(false);

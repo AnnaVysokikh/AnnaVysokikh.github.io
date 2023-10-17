@@ -1,19 +1,19 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Category, Operation } from '../../reduxToolkit/app.types';
+import { CategoryType } from '../../reduxToolkit/app.types';
 // eslint-disable-next-line import/named
 import { ThunkDispatch } from 'redux-thunk';
 // eslint-disable-next-line import/named
 import { AnyAction } from '@reduxjs/toolkit';
 import { fetchDeleteCategory } from '../../reduxToolkit/categoryThunk';
 import { setEditCategory, setOpenAddCategory } from '../../reduxToolkit/categorySlice';
-import style from './CategoryItem.module.sass';
+import style from './Category.module.sass';
 
 interface CategoryItemProps {
-  category: Category;
+  category: CategoryType;
 }
 
-const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
+const Category: React.FC<CategoryItemProps> = ({ category }) => {
   type AppDispatch = ThunkDispatch<string, any, AnyAction>;
   const dispatch: AppDispatch = useDispatch();
   const onDelete = () => {
@@ -39,4 +39,4 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
   );
 };
 
-export default CategoryItem;
+export default Category;

@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 // eslint-disable-next-line import/named
 import { Select, SelectProps } from 'antd';
 import s from './CategorySelect.module.sass';
-import { Category } from '../../reduxToolkit/app.types';
+import { CategoryType } from '../../reduxToolkit/app.types';
 
 export type CategorySelectProps = SelectProps & {
-  items: Category[];
-  selectCategory?: Category;
+  items: CategoryType[];
+  selectCategory?: CategoryType;
   onChange: (value: any) => void;
 };
 

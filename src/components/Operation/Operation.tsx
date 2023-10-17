@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Operation } from '../../reduxToolkit/app.types';
+import { OperationType } from '../../reduxToolkit/app.types';
 // eslint-disable-next-line import/named
 import { ThunkDispatch } from 'redux-thunk';
 // eslint-disable-next-line import/named
@@ -11,7 +11,7 @@ import { RootState } from '../../reduxToolkit/store';
 import s from './Operation.module.sass';
 
 interface CartItemProps {
-  operation: Operation;
+  operation: OperationType;
 }
 
 const getDateDDMMYYYY = (date: Date) => {
@@ -27,7 +27,7 @@ const getDateDDMMYYYY = (date: Date) => {
       ('0' + date.getMinutes()).slice(-2));
 };
 
-const OperationItem: React.FC<CartItemProps> = ({ operation }) => {
+const Operation: React.FC<CartItemProps> = ({ operation }) => {
   const isSingIn = useSelector<RootState, boolean>((state) => state.profileSlice.isSingIn);
 
   type AppDispatch = ThunkDispatch<string, any, AnyAction>;
@@ -70,4 +70,4 @@ const OperationItem: React.FC<CartItemProps> = ({ operation }) => {
   );
 };
 
-export default OperationItem;
+export default Operation;

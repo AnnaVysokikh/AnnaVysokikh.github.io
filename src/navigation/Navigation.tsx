@@ -1,22 +1,22 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-// import CartScreen from 'src/screens/CartScreen/cartScreen';
-import StoreScreen from 'src/screens/StoreScreen/storeScreen';
 import ProfileScreen from 'src/screens/ProfileScreen/Profile';
 import HomeScreen from 'src/screens/HomeScreen/Home';
 import NotFound from 'src/screens/NotFound';
 import RegistrationScreen from 'src/screens/RegistrationScreen';
 import AuthorizationScreen from 'src/screens/AuthorizationScreen';
-import { TokenProvider } from 'src/TokenProvider'; // Импортируйте TokenProvider
+import { TokenProvider } from 'src/TokenProvider';
 import { ProtectedRoute } from './ProtectedRoute';
-// import { AddProductForm } from '../components/Forms/addProductForm/AddProductForm';
+import OperationListScreen from 'src/screens/OperationListScreen';
+import CategoryListScreen from 'src/screens/CategoryListScreen';
+import { AddOperationForm } from 'src/components/Forms/addOperationForm/AddOperationForm';
 
 export const Navigation: React.FC = () => (
   <TokenProvider>
     <Routes>
       <Route path="/" element={<HomeScreen />} />
-      <Route path="/store" element={<StoreScreen />} />
-      {/* <Route path="/cart" element={<CartScreen />} /> */}
+      <Route path="/operationList" element={<OperationListScreen />} />
+      <Route path="/categoryList" element={<CategoryListScreen />} />
       <Route
         path="/profile"
         element={
@@ -26,10 +26,10 @@ export const Navigation: React.FC = () => (
         }
       />
       <Route
-        path="/addProduct"
+        path="/addOperation"
         element={
           <ProtectedRoute>
-            {/* <AddProductForm /> */}
+            <AddOperationForm />
           </ProtectedRoute>
         }
       />

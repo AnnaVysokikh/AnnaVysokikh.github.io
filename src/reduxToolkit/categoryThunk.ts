@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ServerErrors, Category, NewCategory, CategoryList, UploadFile } from './app.types';
+import { ServerErrors, CategoryType, NewCategory, CategoryList, UploadFile } from './app.types';
 import { addCategory, deleteCategory, setCategories, changeCategory } from '../reduxToolkit/categorySlice';
 
 // eslint-disable-next-line import/named
@@ -238,7 +238,7 @@ const fetchChangeCategory = (newCategory: NewCategory, dispatch: Dispatch) => {
   fetch('http://19429ba06ff2.vps.myjino.ru/api/categories/' + newCategory.id, requestOptions)
     .then(async (response) => {
       if (response.ok) {
-        const category: Category = (await response.json()) as Category;
+        const category: CategoryType = (await response.json()) as CategoryType;
         dispatch(changeCategory(category));
       }
       // check for error response
@@ -279,7 +279,7 @@ const fetchAddCategory = (categoryName: string, url: string, dispatch: Dispatch)
   fetch('http://19429ba06ff2.vps.myjino.ru/api/categories', requestOptions)
     .then(async (response) => {
       if (response.ok) {
-        const category: Category = (await response.json()) as Category;
+        const category: CategoryType = (await response.json()) as CategoryType;
         dispatch(addCategory(category));
       }
       // check for error response

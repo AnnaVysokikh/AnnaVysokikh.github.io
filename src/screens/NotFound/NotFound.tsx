@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import s from './NotFound.sass';
+import s from './NotFound.module.sass';
 
 export const NotFound: FC = () => <div className={s.root}>NotFound</div>;
 

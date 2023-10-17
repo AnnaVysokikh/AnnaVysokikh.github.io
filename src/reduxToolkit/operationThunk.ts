@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ServerErrors, Filters, Operation, NewOperation, OperationList } from './app.types';
+import { ServerErrors, Filters, OperationType, NewOperation, OperationList } from './app.types';
 import {
   addOperation,
   addOperations,
@@ -151,7 +151,7 @@ export const fetchAddOperation = createAsyncThunk<void, NewOperation, { rejectVa
       fetch('http://19429ba06ff2.vps.myjino.ru/api/operations', requestOptions)
         .then(async (response) => {
           if (response.ok) {
-            const operation: Operation = (await response.json()) as Operation;
+            const operation: OperationType = (await response.json()) as OperationType;
 
             dispatch(addOperation(operation));
           }
@@ -212,7 +212,7 @@ export const fetchUpdateOperation = createAsyncThunk<void, NewOperation, { rejec
       fetch('http://19429ba06ff2.vps.myjino.ru/api/operations/' + params.id, requestOptions)
         .then(async (response) => {
           if (response.ok) {
-            const operation: Operation = (await response.json()) as Operation;
+            const operation: OperationType = (await response.json()) as OperationType;
 
             dispatch(updateOperation(operation));
           }
