@@ -51,22 +51,40 @@
       "placeholder": "Повторите пароль"
     }
   },
-  "AddProductForm": {
-    "category": "Категория товара",
-    "productName": "Наименование товара",
-    "shortDescription": "Краткое описани товара",
-    "description": "Полное описание товара",
-    "price": "Цена",
-    "addImages": "Добавьте изображения",
-    "error": "Поле обязательно для заполнения",
-    "add": "Добавить",
-    "selectFile": "Выберите файл",
-    "oldPrice": "Старая цена",
-    "change": "Обновить"
-
-  },
   "is_required": "Обязательное поле",
   "Authorization": "Войти",
   "Registration": "Зарегистрироваться",
-  "Exit": "Выйти"
+  "Exit": "Выйти",
+  "FilterForm": {
+    "operationType": "Тип операции",
+    "dateFrom": "Дата с",
+    "dateTo": "Дата до",
+    "apply": "Применить"
+  },
+  "AddOperationForm": {
+    "title": "Добавление операции",
+    "titleEdit": "Редактирование операции",
+    "Profit": "Приход",
+    "Cost": "Расход",
+    "error_no_select_type": "Не выбран тип операции",
+    "cancel": "Отмена",
+    "change": "Изменить",
+    "add": "Добавить",
+    "category": "Категория",
+    "operationName": "Название операции",
+    "description": "Описание",
+    "price": "Стоимость",
+    "minAmount": "Минимальная стоимость",
+    "date": "Дата"
+  },
+  "AddCategoryForm": {
+    "title": "Добавление категории",
+    "titleEdit": "Редактирование категории",
+    "addImages": "Добавить изображение",
+    "cancel": "Отмена",
+    "change": "Изменить",
+    "add": "Добавить",
+    "CategorynName": "Название категории",
+    "selectFile": "Выбрать файл"
+  }
 }

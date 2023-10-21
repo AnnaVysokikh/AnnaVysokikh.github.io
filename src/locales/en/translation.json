@@ -55,21 +55,40 @@
       "placeholder": "Repeat password"
     }
   },
-  "AddProductForm": {
-    "category": "Product category",
-    "productName": "Produсt name",
-    "shortDescription": "Short description of the product",
-    "description": "Description of the product",
-    "price": "Price",
-    "addImages": "Add Images",
-    "error": "The field is required to fill in",
-    "add": "Add",
-    "selectFile": "Select a file",
-    "oldPrice": "Old price",
-    "change": "Change"
-  },
   "is_required": "Required field",
   "Authorization": "Sign in",
   "Registration": "Sign up",
-  "Exit": "Sign out"
+  "Exit": "Sign out",
+  "FilterForm": {
+    "operationType": "Operation type",
+    "dateFrom": "Date from",
+    "dateTo": "Date to",
+    "apply": "Apply"
+  },
+  "AddOperationForm": {
+    "title": "Add operation",
+    "titleEdit": "Edit operation",
+    "Profit": "Profit",
+    "Cost": "Cost",
+    "error_no_select_type": "No set type operation",
+    "cancel": "Cancel",
+    "change": "Edit",
+    "add": "Add",
+    "category": "Category",
+    "operationName": "Operation name",
+    "description": "Description",
+    "price": "Price",
+    "minAmount": "Min price",
+    "date": "Date"
+  },
+  "AddCategoryForm": {
+    "title": "Add category",
+    "titleEdit": "Edit category",
+    "addImages": "Add images",
+    "cancel": "Cancel",
+    "change": "Edit",
+    "add": "Add",
+    "CategorynName": "Categoryn name",
+    "selectFile": "Select file"
+  }
 }

@@ -13,7 +13,6 @@
   
 .datebox-label i {
     font-style: normal;
-    color: #0ab3be;
 }
 
 .datepicker-wrapper {
@@ -47,7 +46,6 @@
     font-size: 17px;
     font-weight: 500;
     color: #19191A;
-    background-color: #F5F7FA;
     border: 1px solid #E9EDF3;
     border-radius: 8px;
     transition: all .2s ease-in-out;
@@ -69,7 +67,6 @@
 .datepicker-calendar {
     padding: 20px;
     border: none;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
     font-family: 'Montserrat', sans-serif;
     color: #19191A;
 }
@@ -85,18 +82,6 @@
 .datepicker-calendar .react-datepicker__navigation--next {
     right: 20px;
 }
-
-
-/* .datepicker-calendar .react-datepicker__navigation-icon--previous:before,
-.datepicker-calendar .react-datepicker__navigation-icon--next:before {
-    border: none;
-    width: 6px;
-    height: 12px;    
-    background-image: url('../../images/arrow-hor-gray.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: none;
-} */
 
 .datepicker-calendar .react-datepicker__navigation-icon--next:before {
     transform: rotateY(180deg);
@@ -154,18 +139,6 @@
 .datepicker-calendar .react-datepicker__year-option:first-child, .datepicker-calendar .react-datepicker__year-option:last-child {
     position: relative;
 }
-/* .datepicker-calendar .react-datepicker__year-option:first-child:before, .datepicker-calendar .react-datepicker__year-option:last-child:before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 6px;
-    height: 12px;
-    top: calc(50% - 4px);
-    left: calc(50% - 3px);
-    background-image: url('../../images/arrow-hor-gray.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-} */
 
 .datepicker-calendar .react-datepicker__year-option:first-child:before {
     transform: rotate(90deg);
@@ -221,10 +194,9 @@
 .datePicker100 input{
     font-size: 18px;
     width: 310px;
-    height: 3.2rem;
+    height: 2.2rem;
     border: 1px solid #bdbdbd;
     border-radius: 0.25em;
-    box-shadow: inset 0 0 5px 5px #888;
     margin-bottom: 8px;
 }
 

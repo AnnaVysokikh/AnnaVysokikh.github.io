@@ -60,8 +60,8 @@ const Operation: React.FC<CartItemProps> = ({ operation }) => {
           </div>
           {isSingIn && (
             <div>
-              <img src={require(`../../images/edit.svg`)} onClick={onEdit} />
-              <img src={require(`../../images/delete.svg`)} onClick={onDelete} />
+              <img className={s.itemImage} src={require(`../../images/edit.svg`)} onClick={onEdit} />
+              <img className={s.itemImage} src={require(`../../images/delete.svg`)} onClick={onDelete} />
             </div>
           )}
         </div>

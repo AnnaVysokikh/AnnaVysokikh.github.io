@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type CategoryType = {
   id: string;
   name: string;
@@ -114,16 +112,16 @@ export type Filters = {
     pageNumber?: number;
   };
   date?: {
-    gte?: string; // от - дата в виде строки new Date().toISOString() 2023-09-19T10:37:16.389+00:00
-    lte?: string; // до - дата в виде строки new Date().toISOString() 2023-09-19T10:37:16.389+00:00
+    gte?: string;
+    lte?: string;
   };
   createdAt?: {
-    gte?: string; // от - дата в виде строки new Date().toISOString() 2023-09-19T10:37:16.389+00:00
-    lte?: string; // до - дата в виде строки new Date().toISOString() 2023-09-19T10:37:16.389+00:00
+    gte?: string;
+    lte?: string;
   };
   updatedAt?: {
-    gte?: string; // от - дата в виде строки new Date().toISOString() 2023-09-19T10:37:16.389+00:00
-    lte?: string; // до - дата в виде строки new Date().toISOString() 2023-09-19T10:37:16.389+00:00
+    gte?: string;
+    lte?: string;
   };
   sorting?: {
     type: 'ASC' | 'DESC';

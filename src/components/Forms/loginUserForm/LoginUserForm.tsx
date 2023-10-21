@@ -12,7 +12,6 @@ import { useTranslation } from 'react-i18next';
 interface LoginUserFormProps {
   registration: boolean;
 }
-// eslint-disable-next-line react/prop-types
 export const LoginUserForm: FC<LoginUserFormProps> = ({ registration }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -39,7 +38,7 @@ export const LoginUserForm: FC<LoginUserFormProps> = ({ registration }) => {
       dispatch(fetchSignIn({ email, password }))
     }
     else {
-      dispatch(fetchSignUp({ email, password, commandId:"9ba431c9-9958-4e8d-bf79-ft7654469853b" }));
+      dispatch(fetchSignUp({ email, password, commandId:"9bafdfdfdffggfgffgft7654469853b" }));
     }
     navigate('/');
     reset();
@@ -98,7 +97,7 @@ export const LoginUserForm: FC<LoginUserFormProps> = ({ registration }) => {
           )}
 
           <button type="submit" className={s.button_send}>
-            {registration ? 'Зарегистрироваться' : 'Войти'}
+            {registration ? t('Registration') : t('Authorization')}
           </button>
       </form>
     </>

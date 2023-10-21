@@ -27,7 +27,6 @@ const operationSlice = createSlice({
     },
     addOperation: (state = initialState, action) => {
       state.operations.push(action.payload);
-      // подумать над сортировкой
     },
     updateOperation: (state = initialState, action) => {
       state.operations = state.operations.map((op) => (op.id === action.payload.id ? action.payload : op));
@@ -50,13 +49,11 @@ const operationSlice = createSlice({
     },
     setEditOperation: (state = initialState, action) => {
       state.editOperation = action.payload;
-      // подумать над сортировкой
     },
     clearOperations: (state = initialState) => {
       state.operations = [];
       state.allUploaded = false;
       state.uploadPage = 0
-      // подумать над сортировкой
     },
   },
 });

@@ -1,6 +1,5 @@
 import React from 'react'
 import verticalLine from './verticalLine.svg'
-import { useNavigate } from "react-router-dom"
 import s from "./NoAuthorization.module.sass"
 import { NavLink, NavLinkProps } from 'react-router-dom';
 import cn from 'clsx';

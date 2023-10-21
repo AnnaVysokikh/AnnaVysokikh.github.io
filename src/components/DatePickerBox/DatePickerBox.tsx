@@ -1,10 +1,7 @@
 import React, { FC, useState } from 'react';
 import DatePicker from 'react-datepicker';
-
-// eslint-disable-next-line import/no-unresolved
 import 'react-datepicker/dist/react-datepicker.css';
 import './DatePickerBox.css';
-import { useDispatch } from 'react-redux';
 
 interface DatePickerBoxProps {
   name: string;
@@ -15,7 +12,6 @@ interface DatePickerBoxProps {
 }
 
 export const DatePickerBox: FC<DatePickerBoxProps> = ({ name, onChange, defaultDate, disabled = false }) => {
-    console.log(defaultDate)
   const [startDate, setStartDate] = useState(defaultDate);
   const [date, setDate] = useState(defaultDate);
   const updateDate = (value: Date) => {

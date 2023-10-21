@@ -26,12 +26,10 @@ export const OperationListScreen: FC = () => {
       <div className={s.form_box}>
         <FilterForm />
         <div style={{ flexGrow: 1 }}>
-          <div style={{ display: 'block', marginRight: '50px', width: '40px', height: '40px'}}>
+          <div className={s.add}>
             {isSingIn && <img src={require(`../../images/plus.svg`)} onClick={onClick} />}
           </div>
-          <div>
-            <OperationList />
-          </div>
+          <OperationList />
         </div>
       </div>
       {openMessage && createPortal(<Modal><AddOperationForm /></Modal>, document.body)}

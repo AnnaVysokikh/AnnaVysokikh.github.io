@@ -1,7 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import s from './AddCategoryForm.module.sass';
-
 import { useTranslation } from 'react-i18next';
 import { CategoryType, NewCategory, OperationType } from '../../../reduxToolkit/app.types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,13 +8,10 @@ import { RootState } from '../../../reduxToolkit/store';
 import { Modal } from '../../../components/modal/modal';
 import { setOpenAddCategory } from '../../../reduxToolkit/categorySlice';
 import { fetchAddCategoryWithImage, fetchChangeCategoryWithImage } from '../../../reduxToolkit/categoryThunk';
-// eslint-disable-next-line import/named
 import { ThunkDispatch } from 'redux-thunk';
-// eslint-disable-next-line import/named
 import { AnyAction } from '@reduxjs/toolkit';
-import { VerificationInput } from '../../VerificationInput/VerificationInput';
+import { Input } from '../../Input/Input';
 
-// eslint-disable-next-line react/prop-types
 export const AddCategoryForm: FC = () => {
   type AppDispatch = ThunkDispatch<OperationType, any, AnyAction>;
   const category = useSelector<RootState, CategoryType>((state) => state.categorySlice.editCategory);
@@ -53,7 +49,6 @@ export const AddCategoryForm: FC = () => {
       dispatch(fetchAddCategoryWithImage(newCategory));
     }
     dispatch(setOpenAddCategory(false));
-
   };
   const { t } = useTranslation();
 
@@ -76,29 +71,30 @@ export const AddCategoryForm: FC = () => {
 
   return (
     <Modal>
+      <div className={s.title}>
+        {category ? t('AddCategoryForm.titleEdit') : t('AddCategoryForm.title')}
+      </div>
       <form onSubmit={handleSubmit(addCategory)}>
         <Controller
           control={control}
           name="name"
           rules={{ required: t`is_requred` }}
           render={({ field }) => (
-            <VerificationInput
+            <Input
               onChange={(date) => {
                 field.onChange(date.target.value);
               }}
               inputValue={category?.name}
-              title={t`AddCategoryForm.name`}
-              placeholder={t`AddCategoryForm.name`}
+              title={t`AddCategoryForm.CategorynName`}
+              placeholder={t`AddCategoryForm.CategorynName`}
               errorMessage={errors.name?.message}
             />
           )}
         />
-
         <div className={s.block}>
           {!selectFile && (
             <>
               <label className={s.text_field__label}>{t('AddCategoryForm.addImages')}</label>
-
               <label className={s.input_file}>
                 <input type="file" accept="image/png, image/jpeg" id="categoryPhoto" onChange={onChangeFile} />
                 <span>{t('AddCategoryForm.selectFile')}</span>
@@ -114,10 +110,10 @@ export const AddCategoryForm: FC = () => {
           )}
         </div>
         <div style={{ display: 'flex', alignContent: 'center', marginTop: '10px' }}>
-        <button type='submit'>
+        <button className={s.button} type='submit'>
           {category ? t('AddCategoryForm.change') : t('AddCategoryForm.add')}
         </button>
-        <button onClick={handleCloseModal}>
+        <button className={s.button} onClick={handleCloseModal}>
           {t('AddCategoryForm.cancel')}
         </button>
         </div>

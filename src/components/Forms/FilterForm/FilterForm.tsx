@@ -2,25 +2,17 @@ import React, { FC } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import s from './FilterForm.module.sass';
 import { useDispatch } from 'react-redux';
-// eslint-disable-next-line import/named
-import { ThunkDispatch } from 'redux-thunk';
-// eslint-disable-next-line import/named
-import { AnyAction } from '@reduxjs/toolkit';
 import { Filters } from '../../../reduxToolkit/app.types';
 import { DatePickerBox } from '../../DatePickerBox/DatePickerBox';
 import { Select } from 'antd';
-import Checkbox from '../../Checkbox/Checkbox';
 import { setFilter } from 'src/reduxToolkit/filterSlice';
-import { clearOperations, setUploadPage } from 'src/reduxToolkit/operationSlice';
+import { clearOperations } from 'src/reduxToolkit/operationSlice';
 import { useTranslation } from 'react-i18next';
 
-// eslint-disable-next-line react/prop-types
 export const FilterForm: FC = () => {
   const defaultDate: Date = new Date();
   const {
-    register,
     handleSubmit,
-    reset,
     control,
     watch,
     formState: { errors },
@@ -47,7 +39,7 @@ export const FilterForm: FC = () => {
     console.log(value);
     const filter: Filters = {
       pagination: {
-        pageSize: 20,
+        pageSize: 10,
         pageNumber: 1,
       },
       sorting: {
@@ -68,10 +60,9 @@ export const FilterForm: FC = () => {
   const selectedEndDate = watch('checkEndDate');
   const { t } = useTranslation();
   return (
-    <div style={{ width: '350px' }}>
       <form onSubmit={handleSubmit(clickSubmit)}>
         <div className={s.filter_form}>
-          <label className={s.filter_form__text_field__label}>{t`Filter.operationType`}</label>
+          <label className={s.label}>{t`FilterForm.operationType`}</label>
           <Controller
             control={control}
             name="operationType"
@@ -79,7 +70,7 @@ export const FilterForm: FC = () => {
               <Select
                 onChange={(date) => field.onChange(date)}
                 defaultValue="Все операции"
-                className={s.filter_form__select}
+                className={s.select}
               >
                 <Select.Option key={1} value="Все операции">
                   Все операции
@@ -93,15 +84,16 @@ export const FilterForm: FC = () => {
               </Select>
             )}
           />
-          <div>
-            <Controller
-              control={control}
-              name="checkStartDate"
-              render={({ field }) => (
-                <Checkbox id="1" name="startDate" label={t`Filter.dateFrom`} onChange={(event) => field.onChange(event)} />
-              )}
-            />
-          </div>
+          <Controller
+            control={control}
+            name="checkStartDate"
+            render={({ field }) => (
+              <>
+                <input type="checkbox" id="startDate" name="startDate" onChange={(event) => field.onChange(event)} />
+                <label htmlFor="startDate">{t`FilterForm.dateFrom`}</label>
+              </>
+            )}
+          />
           <Controller
             control={control}
             name="startDate"
@@ -118,10 +110,12 @@ export const FilterForm: FC = () => {
             control={control}
             name="checkEndDate"
             render={({ field }) => (
-              <Checkbox id="2" name="endDate" label={t`Filter.dateTo`} onChange={(event) => field.onChange(event)} />
+              <>
+                <input type="checkbox" id="endDate" name="endDate" onChange={(event) => field.onChange(event)} />
+                <label htmlFor="endDate">{t`FilterForm.dateTo`}</label>
+              </>
             )}
           />
-          {/*<label className="text-field__error-label">{errors.email?.message}</label>*/}
           <Controller
             control={control}
             name="endDate"
@@ -134,10 +128,8 @@ export const FilterForm: FC = () => {
               />
             )}
           />
-
-          <button type='submit' className={s.button_width} >{t`Filter.applyFilter`}</button>
+          <button type='submit' className={s.button_send} >{t`FilterForm.apply`}</button>
         </div>
       </form>
-    </div>
   );
 };

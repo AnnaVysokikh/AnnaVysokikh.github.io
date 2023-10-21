@@ -3,9 +3,7 @@ import s from './CategoryList.module.sass';
 import { CategoryType, OperationType } from '../../reduxToolkit/app.types';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../reduxToolkit/store';
-// eslint-disable-next-line import/named
 import { ThunkDispatch } from 'redux-thunk';
-// eslint-disable-next-line import/named
 import { AnyAction } from '@reduxjs/toolkit';
 import { fetchGetCategories } from '../../reduxToolkit/categoryThunk';
 import Category from '../Category/Category';
@@ -22,13 +20,11 @@ export const CategoryList: FC = () => {
     }
   }, []);
   const categoryList = categories.map((item) => {
-    // console.log(item);
     return (
-      // eslint-disable-next-line react/jsx-key
       <div className={s.definition_product_list__div} key={item.id} id={item.id}>
         <Category category={item} />
       </div>
     );
   });
-  return <div className={s.definition_product_list}>{categoryList}</div>;
+  return <div className={s.definition_product_list}>{categoryList}</div>
 };

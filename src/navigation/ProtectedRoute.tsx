@@ -12,6 +12,12 @@ export const ProtectedRoute: FC<Props> = ({ children }) => {
   if ((location.pathname === "/profile") && token) {
     return <>{children}</>;
   }
+  if ((location.pathname === "/categoryList") && token) {
+    return <>{children}</>;
+  }
+  if ((location.pathname === "/operationList") && token) {
+    return <>{children}</>;
+  }
   if (token && isAdmin) {
     return <>{children}</>;
   } else {

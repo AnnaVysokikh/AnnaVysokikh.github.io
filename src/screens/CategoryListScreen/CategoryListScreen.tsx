@@ -20,12 +20,10 @@ export const CategoryListScreen: FC = () => {
   };
   return (
     <Page title={t`CategoryScreenTitle`} className={s.root}>
-      <div style={{ display: 'block', marginRight: '50px', width: '40px', height: '40px'}}>
+      <div  className={s.add}>
         <img src={require(`../../images/plus.svg`)} onClick={onClick} />
       </div>
-      <div>
         <CategoryList />
-      </div>
       {openMessage && createPortal(<Modal><AddCategoryForm /></Modal>, document.body)}
     </Page>
   );

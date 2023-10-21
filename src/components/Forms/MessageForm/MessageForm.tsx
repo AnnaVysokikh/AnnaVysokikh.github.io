@@ -23,7 +23,6 @@ export const MessageForm: FC<MessageFormProps> = ({ caption, text, onClickEvent,
           </label>
         </div>
       );
-
       j = j + 1;
     }
     return content;

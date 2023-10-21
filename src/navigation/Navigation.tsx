@@ -9,14 +9,11 @@ import { TokenProvider } from 'src/TokenProvider';
 import { ProtectedRoute } from './ProtectedRoute';
 import OperationListScreen from 'src/screens/OperationListScreen';
 import CategoryListScreen from 'src/screens/CategoryListScreen';
-import { AddOperationForm } from 'src/components/Forms/addOperationForm/AddOperationForm';
 
 export const Navigation: React.FC = () => (
   <TokenProvider>
     <Routes>
       <Route path="/" element={<HomeScreen />} />
-      <Route path="/operationList" element={<OperationListScreen />} />
-      <Route path="/categoryList" element={<CategoryListScreen />} />
       <Route
         path="/profile"
         element={
@@ -26,10 +23,18 @@ export const Navigation: React.FC = () => (
         }
       />
       <Route
-        path="/addOperation"
+        path="/operationList"
         element={
           <ProtectedRoute>
-            <AddOperationForm />
+            <OperationListScreen />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/categoryList"
+        element={
+          <ProtectedRoute>
+            <CategoryListScreen />
           </ProtectedRoute>
         }
       />

@@ -74,9 +74,7 @@ export const OperationList: FC = () => {
   }, [filter]);
 
   const operationList = operations.map((item) => {
-    // console.log(item);
     return (
-      // eslint-disable-next-line react/jsx-key
       <div className={s.definition_product_list__div} key={item.id} id={item.id}>
         <Operation operation={item} />
       </div>

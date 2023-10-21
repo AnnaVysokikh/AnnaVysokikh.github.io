@@ -5,12 +5,10 @@ import { LanguageButton } from '../languageButton/LanguageButton';
 import { ThemeSwitcher } from '../ThemeSwitcher';
 import { useTranslation } from 'react-i18next';
 import TopMenu from './TopMenu/TopMenu';
-import { Link } from 'react-router-dom';
 import YesAuthorization from './YesAuthorization/YesAuthorization';
 import NoAuthorization from './NoAuthorization/NoAuthorization';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../reduxToolkit/store';
-// import { BasicButton } from '../basicButton/BasicButton';
 
 type HeaderProps = {
   children?: React.ReactNode;
@@ -42,11 +40,6 @@ const Header = ({ children }: HeaderProps) => {
       <Account />
       <ThemeSwitcher />
       <LanguageButton />
-      <div className={s.buttonsContainer}>
-        {/* <Link to="/cart">
-          <BasicButton text={t`CartButtonTitle`} />
-        </Link> */}
-      </div>
       {children}
     </div>
   );

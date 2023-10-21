@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-// eslint-disable-next-line import/named
 import { Select, SelectProps } from 'antd';
 import s from './CategorySelect.module.sass';
 import { CategoryType } from '../../reduxToolkit/app.types';
@@ -22,6 +21,5 @@ export const CategorySelect: FC<CategorySelectProps> = ({ items, selectCategory,
         </Select.Option>
       ))}
     </Select>
-
   );
 };

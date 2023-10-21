@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, HTMLInputTypeAttribute } from 'react';
-import style from './VerificationInput.module.sass';
+import style from './Input.module.sass';
 
-interface VerificationInputProps {
+interface InputProps {
   title: string;
   inputValue?: string;
   placeholder?: string;
@@ -11,7 +11,7 @@ interface VerificationInputProps {
   type?: HTMLInputTypeAttribute;
 }
 
-export const VerificationInput: FC<VerificationInputProps> = ({
+export const Input: FC<InputProps> = ({
   title,
   inputValue,
   placeholder,
@@ -20,7 +20,6 @@ export const VerificationInput: FC<VerificationInputProps> = ({
   disabled = false,
   type = 'text',
 }) => {
-  console.log(inputValue);
   return (
     <>
       <label className={style.title_label}>{title}</label>

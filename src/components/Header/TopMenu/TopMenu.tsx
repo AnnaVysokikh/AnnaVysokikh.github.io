@@ -21,9 +21,11 @@ const TopMenu = ({ children }: TopMenuProps) => {
       <NavLink className={getClassName} to="/">
         {t`HomeScreenTitle`}
       </NavLink>
+      {isSingIn && (
       <NavLink className={getClassName} to="/operationList">
         {t`OperationScreenTitle`}
       </NavLink>
+      )}
       {isSingIn && (
         <NavLink className={getClassName} to="/categoryList">
           {t`CategoryScreenTitle`}
@@ -34,7 +36,6 @@ const TopMenu = ({ children }: TopMenuProps) => {
           {t`ProfileScreenTitle`}
         </NavLink>
       )}
-
     </div>
   );
 };

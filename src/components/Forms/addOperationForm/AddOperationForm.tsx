@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { SubmitHandler, useForm, Controller } from 'react-hook-form';
-import './AddOperationForm.css';
-
+import s from './AddOperationForm.module.sass';
 import { useTranslation } from 'react-i18next';
 import { CategoryType, NewOperation, OperationType } from '../../../reduxToolkit/app.types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,16 +10,13 @@ import { Modal } from '../../../components/modal/modal';
 import { CategorySelect } from '../../../components/CategorySelect';
 import { Select } from 'antd';
 import { fetchGetCategories } from '../../../reduxToolkit/categoryThunk';
-// eslint-disable-next-line import/named
 import { ThunkDispatch } from 'redux-thunk';
-// eslint-disable-next-line import/named
 import { AnyAction } from '@reduxjs/toolkit';
 import { fetchAddOperation, fetchUpdateOperation } from '../../../reduxToolkit/operationThunk';
 import { DatePickerBox } from '../../DatePickerBox/DatePickerBox';
 
 const { Option } = Select;
 
-// eslint-disable-next-line react/prop-types
 export const AddOperationForm: FC = () => {
   const allCategoryUploaded = useSelector<RootState, boolean>((state) => state.categorySlice.allUploaded);
   type AppDispatch = ThunkDispatch<OperationType, any, AnyAction>;
@@ -50,8 +46,6 @@ export const AddOperationForm: FC = () => {
       name: operation ? operation.name : undefined,
       amount: operation ? operation.amount : undefined,
       date: defaultDate,
-      // createdAt: createdAt,
-      // updatedAt: updatedAt,
     },
   });
 
@@ -70,7 +64,6 @@ export const AddOperationForm: FC = () => {
       return;
     }
     if (operation) {
-      console.log('kkkk');
       console.log(value.date);
       const newOperation: NewOperation = {
         id: operation.id,
@@ -115,48 +108,43 @@ export const AddOperationForm: FC = () => {
     setTypeUndefined(false);
     return setType('Cost');
   };
-  // const onChange = (value: string[]) => {
-  //   console.log(value);
-  // };
   return (
     <Modal>
-      <button disabled={type === 'Profit'} onClick={onClickProf} >Приход</button>
-      <button disabled={type === 'Cost'} onClick={onClickCost} >Расход</button>
+      <div className={s.title}>
+        {operation ? t('AddOperationForm.titleEdit') : t('AddOperationForm.title')}
+      </div>
+      <button className={s.button} disabled={type === 'Profit'} onClick={onClickProf} >{t('AddOperationForm.Profit')}</button>
+      <button className={s.button} disabled={type === 'Cost'} onClick={onClickCost} >{t('AddOperationForm.Cost')}</button>
 
-      {typeUndefined && <label className="text-field__error-label">Не выбран тип операции</label>}
+      {typeUndefined && <label className={s.error_label}>{t('AddOperationForm.error_no_select_type')}</label>}
       <form onSubmit={handleSubmit(addOperation)}>
-        <div className="text-field">
-          <label className="text-field__label">{t('AddOperationForm.category')}</label>
-
+        <div className={s.text_field}>
+          <label className={s.text_field__label}>{t('AddOperationForm.category')}</label>
           <CategorySelect
             items={categories}
             onChange={(value) => setCategoryId(value)}
             selectCategory={operation ? operation.category : null}
           />
-          {/*<label className="text-field__error-label">{errors.name?.message}</label>*/}
-
-          <label className="text-field__label">{t('AddOperationForm.operationName')}</label>
+          <label className={s.text_field__label}>{t('AddOperationForm.operationName')}</label>
           <input
-            className="text-field__input"
+            className={s.text_field__input}
             type="text"
             placeholder={t('AddOperationForm.operationName')}
             {...register('name', {
               required: t('is_required'),
             })}
           />
-          <label className="text-field__error-label">{errors.name?.message}</label>
-
-          <label className="text-field__label">{t('AddOperationForm.description')}</label>
+          <label className={s.text_field__error_label}>{errors.name?.message}</label>
+          <label className={s.text_field__label}>{t('AddOperationForm.description')}</label>
           <input
-            className="text-field__input"
+            className={s.text_field__input}
             type="text"
             placeholder={t('AddOperationForm.description')}
             {...register('desc')}
           />
-
-          <label className="text-field__label">{t('AddOperationForm.price')}</label>
+          <label className={s.text_field__label}>{t('AddOperationForm.price')}</label>
           <input
-            className="text-field__input"
+            className={s.text_field__input}
             type="number"
             placeholder={t('AddOperationForm.price')}
             step="any"
@@ -168,10 +156,8 @@ export const AddOperationForm: FC = () => {
               },
             })}
           />
-
-          <label className="text-field__error-label">{errors.amount?.message}</label>
-
-          <label className="text-field__label">{t('AddOperationForm.date')}</label>
+          <label className={s.text_field__error_label}>{errors.amount?.message}</label>
+          <label className={s.text_field__label}>{t('AddOperationForm.date')}</label>
           <Controller
             control={control}
             name="date"
@@ -183,13 +169,12 @@ export const AddOperationForm: FC = () => {
               />
             )}
           />
-
-          <label className="text-field__error-label">{errors.amount?.message}</label>
+          <label className={s.text_field__error_label}>{errors.amount?.message}</label>
           <div style={{ display: 'flex', alignContent: 'center' }}>
-            <button className="button-add-op" type='submit'>
+            <button className={s.button} type='submit'>
               {operation ? t('AddOperationForm.change') : t('AddOperationForm.add')}
             </button>
-            <button className="button-add-op" onClick={handleCloseModal} >{t('AddOperationForm.cancel')}</button>
+            <button className={s.button} onClick={handleCloseModal} >{t('AddOperationForm.cancel')}</button>
           </div>
         </div>
       </form>

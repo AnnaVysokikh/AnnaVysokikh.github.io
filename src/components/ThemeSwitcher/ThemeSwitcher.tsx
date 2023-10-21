@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 import cn from 'clsx';
-// import LightModeIcon from './NightIcon.svg';
-// import DarkModeIcon from './SunIcon.svg';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { useThemeContext, Theme } from '../../theming';
